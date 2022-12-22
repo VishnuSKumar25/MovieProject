@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="table-responsive-md">
+  <table class="m-3 center">
+    <tr>
+      <td rowspan="4"><img class="ml-3 mb-3" src="{{movie.img.url}}"></td>
+      <td class="bg-info text-light"><h3>{{movie.name}}</h3></td>
+    </tr>
+
+    <tr>
+      <td class="bg-secondary text-light">{{movie.desc}}</td>
+    </tr>
+
+    <tr>
+      <td class="bg-dark text-light"><strong>Year</strong>: {{movie.year}}</td>
+    </tr>
+
+    <tr>
+      <td>
+        <a class="btn btn-warning ml-5 mt-3" href="{% url 'movieapp:update' movie.id %}">Update</a>
+        <a class="btn btn-danger ml-5 mt-3" href="{% url 'movieapp:delete' movie.id %}">Delete</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<!--<table class="ml-3">-->
+<!--  <tr>-->
+<!--    <img class="ml-3 mb-3" src="{{movie.img.url}}">-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>Name: <strong>{{movie.name}}</strong></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>{{movie.desc}}</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td><strong>Year</strong>: {{movie.year}}</td>-->
+<!--  </tr>-->
+
+<!--</table>-->
+<!--<div class="row justify-content-center">-->
+<!--  <div class="col-2">-->
+<!--    <a class="btn btn-warning ml-5 mt-3" href="{% url 'movieapp:update' movie.id %}">Update</a>-->
+<!--  </div>-->
+<!--  <div class="col-2">-->
+<!--    <a class="btn btn-danger ml-5 mt-3" href="{% url 'movieapp:delete' movie.id %}">Delete</a>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+{% endblock %}

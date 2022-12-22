@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block body %}
+<h3 class="ml-2 mb-3 mt-3"><u>Add Movie</u></h3>
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="container-fluid">
+    <div class="form-group row">
+      <label for="name" class="col-md-2 col-form-label">Movie Name:</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="name" placeholder="Enter Movie Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="sdesc" class="col-md-2 col-form-label">Movie Short Description:</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="sdesc" placeholder="Enter Short Movie Description">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="desc" class="col-md-2 col-form-label">Movie Description:</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="desc" placeholder="Enter Movie Description">
+      </div>
+    </div>
+      <div class="form-group row">
+        <label for="year" class="col-md-2 col-form-label">Movie Year:</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="year" placeholder="Enter Movie Year">
+        </div>
+      </div>
+    <div class="form-group row">
+      <label for="img" class="col-md-2 col-form-label">Movie Poster:</label>
+      <input type="file" class="form-control-file col-md-2 col-form-label" id="img">
+    </div>
+    <div class="form-group row">
+      <div class="col-md-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    <label class="ml-5" for="name">Movie Name:</label>-->
+<!--    <input class="ml-4 mb-3 mt-3" type="text" name="name" placeholder="Enter Movie Name"><br>-->
+<!--    <label class="ml-5" for="sdesc">Movie Short Description:</label>-->
+<!--    <input class="mb-3" type="text" name="sdesc" placeholder="Enter Short Movie Description"><br>-->
+<!--    <label class="ml-5" for="desc">Movie Description:</label>-->
+<!--    <input class="mb-3" type="text" name="desc" placeholder="Enter Movie Description"><br>-->
+<!--    <label class="ml-5" for="year">Movie Year:</label>-->
+<!--    <input class="ml-5 mb-3" type="text" name="year" placeholder="Enter Movie Year"><br>-->
+<!--    <input class="mb-3 ml-5" type="file" name="img"><br>-->
+<!--    <input class="btn btn-success ml-5" type="submit">-->
+<!--</form>-->
+{% endblock %}
